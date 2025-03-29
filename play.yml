@@ -1,1 +1,9 @@
-
+---
+- hosts: apache
+  roles:
+   - apache
+   - java
+- hosts: nginx
+  roles:
+   - nginx
+   - java
