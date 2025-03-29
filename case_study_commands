@@ -1,0 +1,47 @@
+# Ansible installation
+
+- sudo apt update -y
+- sudo apt install ansible -y
+
+# Ansible role creation
+  
+cd /etc/ansible/roles
+- ansible-galaxy init roles/apache
+- ansible-galaxy init roles/nginx
+- ansible-galaxy init roles/java
+
+# Define tasks in role
+
+refer roles folders for each role
+- for apache - apache/tasks - install.yml, configure.yml, main.yml
+               apache/files - sample.html
+               apache/handlers - main.yml
+
+- for nginx - nginx/tasks - install.yml, configure.yml, main.yml
+              nginx/files - sample.html
+              nginx/handlers - main.yml
+
+- for java - java/tasks - main.yml
+
+# create playbook
+  - sudo nano play.yml
+
+  refer - play.yml
+
+# Execute playbook
+
+  - ansible-playbook play.yml
+
+# Verfication of apache and nginx
+
+  - on browser - http://<apache_server_ip>/
+  - on browser - http://<nginx_server_ip>/
+
+# Verify java installation:
+
+  - java --version
+
+
+
+
+
