@@ -1,1 +1,6 @@
-
+---
+- name: restart the nginx web server
+  service:
+    name: nginx
+    state: restarted
+  become: true
