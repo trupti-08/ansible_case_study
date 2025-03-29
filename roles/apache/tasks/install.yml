@@ -1,1 +1,7 @@
-
+---
+- name: Install apache
+  become: true
+  apt: 
+   name: apache2
+   update_cache: yes
+   state: latest
