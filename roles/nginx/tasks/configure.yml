@@ -4,3 +4,5 @@
   copy:
     src: sample.html
     dest: /var/www/html/index.html
+  notify:
+  - restart the nginx web server
