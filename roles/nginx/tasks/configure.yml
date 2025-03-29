@@ -1,1 +1,6 @@
-
+---
+- name: copy the html file
+  become: true
+  copy:
+    src: sample.html
+    dest: /var/www/html/index.html
