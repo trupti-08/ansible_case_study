@@ -1,1 +1,7 @@
-
+---
+- name: install java 
+  become: true
+  apt: 
+   name: openjdk-17-jdk 
+   state: present
+   
